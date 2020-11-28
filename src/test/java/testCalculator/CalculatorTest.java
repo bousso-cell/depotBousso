@@ -15,6 +15,7 @@ public class CalculatorTest {
     public void setUp() throws Exception{
         calculator=new ClassCalculator();
     }
+    // methode ajoutee par Diarra
     @Test
     public void testSum() {
 
@@ -38,5 +39,22 @@ public class CalculatorTest {
         //Calculator calculator = new Calculator();
         Assert.assertEquals(2, calculator.div(6, 3));
     }
+    // methode ajouter par Oumy
+    @Test(expected = ArithmeticException.class)
+    public void testDivideWillThrowExceptionWhenDivideOnZero() {
+        calculator.div(6, 0);
+    }
+    @Test
+    public void testMaximumElt() {
+        int []	list= {1,2,7,10};
+        Assert.assertEquals(10, calculator.MaxElement(list));
 
+    }
+
+    @Test
+    public void testMinimumElt() {
+        int []	list= {1,2,7,10};
+        Assert.assertEquals(1, calculator.minElement(list));
+
+    }
 }
