@@ -57,6 +57,7 @@ public class CalculatorTest {
         Assert.assertEquals(1, calculator.minElement(list));
 
     }
+    // methode ajoutee par Wore
     
     @Test
 	public void testMultiply(){
